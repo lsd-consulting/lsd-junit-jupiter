@@ -1,11 +1,11 @@
-# lsd-junit5
+# lsd-junit-jupiter
 
-[![Build](https://github.com/lsd-consulting/lsd-junit5/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/lsd-consulting/lsd-junit5/actions/workflows/ci.yml)
-[![Nightly Build](https://github.com/lsd-consulting/lsd-junit5/actions/workflows/nightly.yml/badge.svg)](https://github.com/lsd-consulting/lsd-junit5/actions/workflows/nightly.yml)
-[![GitHub release](https://img.shields.io/github/release/lsd-consulting/lsd-junit5)](https://github.com/lsd-consulting/lsd-junit5/releases)
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.lsd-consulting/lsd-junit5.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.github.lsd-consulting%22%20AND%20a:%22lsd-junit5%22)
+[![Build](https://github.com/lsd-consulting/lsd-junit-jupiter/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/lsd-consulting/lsd-junit-jupiter/actions/workflows/ci.yml)
+[![Nightly Build](https://github.com/lsd-consulting/lsd-junit-jupiter/actions/workflows/nightly.yml/badge.svg)](https://github.com/lsd-consulting/lsd-junit-jupiter/actions/workflows/nightly.yml)
+[![GitHub release](https://img.shields.io/github/release/lsd-consulting/lsd-junit-jupiter)](https://github.com/lsd-consulting/lsd-junit-jupiter/releases)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.lsd-consulting/lsd-junit-jupiter.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.github.lsd-consulting%22%20AND%20a:%22lsd-junit-jupiter%22)
 
-JUnit 5 extension for [lsd-core](https://github.com/lsd-consulting/lsd-core) - automatically generates living sequence diagrams from your tests.
+JUnit Jupiter extension for [lsd-core](https://github.com/lsd-consulting/lsd-core) - automatically generates living sequence diagrams from your tests.
 
 ## Quick Start
 
@@ -19,7 +19,7 @@ Add the dependency to your project:
 ```xml
 <dependency>
     <groupId>io.github.lsd-consulting</groupId>
-    <artifactId>lsd-junit5</artifactId>
+    <artifactId>lsd-junit-jupiter</artifactId>
     <version>X.X.X</version>
     <scope>test</scope>
 </dependency>
@@ -31,7 +31,7 @@ Add the dependency to your project:
   <summary>Gradle</summary>
 
 ```groovy
-testImplementation 'io.github.lsd-consulting:lsd-junit5:X.X.X'
+testImplementation 'io.github.lsd-consulting:lsd-junit-jupiter:X.X.X'
 ```
 </details>
 
@@ -62,7 +62,7 @@ class PaymentServiceTest {
 </details>
 
 The extension:
-- Hooks into JUnit 5 lifecycle to generate reports
+- Hooks into JUnit Jupiter lifecycle to generate reports
 - Creates a new scenario for each `@Test` method
 - Generates sequence diagrams showing captured interactions
 - Marks scenarios as passed/failed based on test results
@@ -141,7 +141,7 @@ Configure via `lsd.properties` on your classpath. See [lsd-core configuration](h
 
 | Property | Default | Description |
 |----------|---------|-------------|
-| `lsd.junit5.hideStacktrace` | `false` | Hide stacktraces in report popups for aborted/failed tests. Useful for approval testing where stack trace line numbers vary between builds. |
+| `lsd.junit.hideStacktrace` | `false` | Hide stacktraces in report popups for aborted/failed tests. Useful for approval testing where stack trace line numbers vary between builds. |
 
 ## Ecosystem
 

@@ -25,7 +25,7 @@ import java.util.regex.Pattern
 class LsdExtension : TestWatcher, AfterTestExecutionCallback, AfterAllCallback {
     private val lsdContext: LsdContext = LsdContext.instance
     private val idGenerator = lsdContext.idGenerator
-    private val hideStacktrace = getBoolean("lsd.junit5.hideStacktrace")
+    private val hideStacktrace = getBoolean("lsd.junit.hideStacktrace")
     override fun testSuccessful(context: ExtensionContext) {
         lsdContext.completeScenario(
             prefixParentDisplayName(context),

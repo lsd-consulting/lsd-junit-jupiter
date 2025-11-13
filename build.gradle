@@ -75,20 +75,20 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             groupId = "$group"
-            artifactId = 'lsd-junit5'
+            artifactId = 'lsd-junit-jupiter'
             version = "${version}"
 
             from components.kotlin
             artifact sourcesJar
             artifact javadocJar
             pom {
-                name = 'lsd-junit5'
-                description = 'A library providing a Junit5 extension for generating LSD reports'
-                url = 'https://github.com/lsd-consulting/lsd-junit5.git'
+                name = 'lsd-junit-jupiter'
+                description = 'A library providing a JUnit Jupiter extension for generating LSD reports'
+                url = 'https://github.com/lsd-consulting/lsd-junit-jupiter.git'
                 licenses {
                     license {
                         name = "MIT License"
-                        url = "https://github.com/lsd-consulting/lsd-junit5/blob/main/LICENSE"
+                        url = "https://github.com/lsd-consulting/lsd-junit-jupiter/blob/main/LICENSE"
                         distribution = "repo"
                     }
                 }
@@ -107,7 +107,7 @@ publishing {
                     }
                 }
                 scm {
-                    url = "https://github.com/lsd-consulting/lsd-junit5.git"
+                    url = "https://github.com/lsd-consulting/lsd-junit-jupiter.git"
                 }
             }
             repositories {
